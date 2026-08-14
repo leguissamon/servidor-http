@@ -6,9 +6,10 @@ const server = http.createServer();
 
 server.on('request', (req, res) =>{
     console.log(`servidor funcionando! ${req.method} ${req.url}`);
+    console.log(new Date().toISOString())
     res.statusCode = 201
     res.setHeader('Content-Type', 'text/plain; charset=utf-8');
-    res.end("Recurso criao");
+    res.end("Recurso criado");
 });
 
 server.listen(porta, ()=> {
